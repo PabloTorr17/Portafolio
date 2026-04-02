@@ -1,0 +1,104 @@
+.header {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  gap: 12px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.navBtns { display: flex; gap: 4px; }
+
+.navBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--bg3);
+  border: none;
+  color: var(--text2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: all var(--transition);
+}
+.navBtn:hover { background: var(--bg4); color: var(--text); }
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 6px 16px;
+  width: 220px;
+  transition: all var(--transition);
+}
+.searchBar:focus-within {
+  border-color: var(--accent);
+  background: var(--surface2);
+}
+
+.searchIcon { color: var(--text3); font-size: 15px; }
+
+.searchBar input {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 13px;
+  font-family: 'DM Sans', sans-serif;
+  outline: none;
+  width: 100%;
+}
+.searchBar input::placeholder { color: var(--text3); }
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  color: var(--text3);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  transition: color var(--transition);
+}
+.iconBtn:hover, .iconBtn.active { color: var(--text); }
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1DB954;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (max-width: 640px) {
+  .header { padding: 0 16px; }
+  .searchBar { width: 160px; }
+  .navBtns { display: none; }
+}
